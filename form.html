@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="home.html"><img src="asset/img/logo-header.png" alt="">
+          <h3>GDSHOOP</h3></a>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="home.html"  id="produkHome">Home</a></li>
+          <li><a href="#" class="active-form">Form</a></li>
+          <li><a href="product.html" id="produkBtn">Products</a></li>
+        </ul>
+        <ul class="navbar-actions">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </nav>
+
+    <div class="form-container">
+        
+       <form action="post">
+        <h3 style="text-align: center;">Create Product</h3>
+        <p>
+            <label for="inputBarang">Masukan Nama Barang : </label>
+            <input type="text" name="inputBarang" id="inputBarang" placeholder="Masukan Nama Barang"><span id="errorNamaBarang"></span></p>
+        
+        <p>
+            <label for="hargaBarang">Masukan Harga Barang : </label>
+            <input type="text" name="hargaBarang" id="hargaBarang" placeholder="Masukan Harga Barang"><span id="errorHargaBarang"></span></p>
+        <p>
+            <label for="stokBarang">Masukan Stok Barang : </label>
+            <input type="text" name="stokBarang" id="stokBarang" placeholder="Masukan Stok Barang"><span id="errorStokBarang"></span></p>
+        <p>
+            <label for="statusDiskon">Status Diskon : </label>
+            <input type="checkbox" name="statusDiskon" id="statusDiskon">
+            <span id="errorStokBarang"></span></p>
+        <p>
+            <label for="hargaDiskon">Masukan Harga Diskon : </label>
+            <input type="text" name="hargaDiskon" id="hargaDiskon" placeholder="Masukan Harga Diskon Barang">
+            <span id="errorHargaDiskon"></span></p>
+        <p>
+            <label for="kategoriBarang">Kategori : </label>
+            <select name="kategoriBarang" id="kategoriBarang">
+                <option value="Elektronik">Elektronik</option>
+                <option value="Aksesoris">Aksesoris</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Komputer">Komputer</option>
+                <option value="Spare Part">Spare Part</option>
+            </select>
+        </p>
+        <p>
+            <label for="gambarBarang">Gambar Barang</label>
+            <input type="text" placeholder="Masukan Image Url" name="gambarBarang" id="gambarBarang">
+            <span id="errorGambarBarang"></span></p>
+        <p>
+            <img src="asset/img/thumbnail.jpg" alt="thumbnail" id="thumbnail">
+        </p>
+        <p>
+            <label for="deskripsi">Deskripsi</label>
+            <textarea name="deskripsi" id="deskripsi" placeholder="Masukan Deskripsi Produk"></textarea>
+            <span id="errorDeskripsi"></span></p>
+        <p>
+            <button type="submit" id="submit">Proses</button>
+        </p>
+       </form>
+    </div>
+      
+    
+
+      <div class="footer-container">
+        <div class="footer"><p>Copyright 2023 Muhamad Rizki Aditya</p></div>
+      </div>
+      
+      <script src="asset/js/script.js"></script>
+      <script>
+        buttonSubmitNode.addEventListener("click", validasi);
+        gambarBarangNode.addEventListener("change", validasi);
+        namaBarangNode.addEventListener("focus", hapusError);
+        hargaBarangNode.addEventListener("focus", hapusError);
+        stokBarangNode.addEventListener("focus", hapusError);
+        hargaDiskonNode.addEventListener("focus", hapusError);
+        gambarBarangNode.addEventListener("focus", hapusError);
+        deskripsiNode.addEventListener("focus", hapusError);
+
+      </script>
+</body>
+</html>
